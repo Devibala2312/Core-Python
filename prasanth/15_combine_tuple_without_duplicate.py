@@ -1,5 +1,0 @@
-tuple1 = input("Enter the tuple1 values separated by comma: ")
-tuple1 = tuple(word.strip() for word in tuple1.split(","))
-tuple2 = input("Enter the tuple2 values separated by comma: ")
-tuple2 = tuple(word.strip() for word in tuple2.split(","))
-print("The combined tuple without duplicate", tuple(set(tuple1) | set(tuple2)))
