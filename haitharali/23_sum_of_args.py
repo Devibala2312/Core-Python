@@ -1,0 +1,1 @@
+# 23. Write a function sum_all(*args) that accepts any number of numeric arguments and returns their sum.
