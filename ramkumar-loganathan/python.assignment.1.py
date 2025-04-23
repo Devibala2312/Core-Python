@@ -103,67 +103,6 @@ def merge_tuples_unique():
     tup2 = (3, 4, 5)
     print(tuple(set(tup1 + tup2)))
 
-def factorial_while_loop():
-    print("\nTask 16:")
-    num = 5
-    result = 1
-    while num > 1:
-        result *= num
-        num -= 1
-    print(f"Factorial: {result}")
-
-def sum_even_numbers_to_100():
-    print("\nTask 17:")
-    total = sum(x for x in range(1, 101) if x % 2 == 0)
-    print(f"Sum of even numbers: {total}")
-
-def count_vowels_in_string():
-    print("\nTask 18:")
-    s = "Hello World"
-    vowels = "aeiouAEIOU"
-    count = sum(1 for char in s if char in vowels)
-    print(f"Vowel count: {count}")
-
-def check_even_or_odd():
-    print("\nTask 19:")
-    num = 4
-    print("Even" if num % 2 == 0 else "Odd")
-
-def check_voting_eligibility():
-    print("\nTask 20:")
-    age = 20
-    print("Eligible to vote" if age >= 18 else "Not eligible")
-
-def yield_positive_numbers():
-    print("\nTask 21:")
-    lst = [-1, 0, 2, -3, 4]
-    def positive_gen(nums):
-        for num in nums:
-            if num > 0:
-                yield num
-    print(list(positive_gen(lst)))
-
-def welcome(name="User"):
-    print("\nTask 22:")
-    print(f"Welcome, {name}!")
-
-def sum_all(*args):
-    print("\nTask 23:")
-    print(f"Sum: {sum(args)}")
-
-def print_user_info(**kwargs):
-    print("\nTask 24:")
-    for k, v in kwargs.items():
-        print(f"{k}: {v}")
-
-visits = 0
-def track_visit(page):
-    print("\nTask 25:")
-    global visits
-    visits += 1
-    message = f"User visited {page}. Total visits: {visits}"
-    print(message)
-
 def main():
     count_characters_in_string()
     count_strings_with_same_start_end()
@@ -180,17 +119,6 @@ def main():
     double_tuple_elements()
     swap_first_last_tuple()
     merge_tuples_unique()
-    factorial_while_loop()
-    sum_even_numbers_to_100()
-    count_vowels_in_string()
-    check_even_or_odd()
-    check_voting_eligibility()
-    yield_positive_numbers()
-    welcome("Alice")  # Or leave blank to use default
-    sum_all(1, 2, 3, 4, 5)
-    print_user_info(name="John", age=30, country="USA")
-    track_visit("Homepage")
-    track_visit("Contact Page")
 
 if __name__ == "__main__":
     main()
