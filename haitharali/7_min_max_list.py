@@ -1,5 +1,5 @@
 # 7. Given a list of integers, find the largest and smallest
-# numbers in the list without using the built-in max() and min() functions
+# inputNumbers in the list without using the built-in max() and min() functions
 
 def min_max_list(input_list):
     length = len(input_list)
@@ -12,7 +12,7 @@ def min_max_list(input_list):
                     x = input_list[i]
                     input_list[i] = input_list[j]
                     input_list[j] = x
-        print("input list", input_list)
+        print("inputAge list", input_list)
         print("minimum is ", input_list[0])
         print("maximum is ", input_list[-1])
 

@@ -1,12 +1,12 @@
-def appendingToString(input):
-    if len(input) >= 3:
-        if (input.endswith('ing')):
-            input+= 'ly'
+def appending_to_string(inputString):
+    if len(inputString) >= 3:
+        if inputString.endswith('ing'):
+            inputString+= 'ly'
         else:
-            input+= 'ing'
-        # print(input)
-        return input
+            inputString+= 'ing'
+        # print(inputAge)
+        return inputString
     else:
-        return input
+        return inputString
 
-print(appendingToString('cursor'))
+print(appending_to_string('cursor'))
