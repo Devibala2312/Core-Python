@@ -108,3 +108,34 @@ def program():
     print(f'result :: {result}')
 
 program()
+
+
+# 10. Given two sets, write a function to return their union, intersection, and difference.
+def program():
+    s1 = {1, 3, 5, 7, 9, 2}
+    s2 = {3, 5, 6, 7, 8}
+
+    print(f'union :: {s1 | s2}')
+    print(f'intersection :: {s1 & s2}')
+    print(f'difference s1:: {s1 - s2}')
+    print(f'difference s2:: {s2 - s1}')
+
+
+program()
+
+
+# 11. Given a list of tuples where each tuple contains a name and a score (e.g., [('Alice', 90), ('Bob', 85), ('Alice', 95)]), write a function to return a dictionary where each name maps to the sum of their scores.
+def program():
+    t = [('Alice', 90), ('Bob', 85), ('Alice', 95)]
+    result = {}
+
+    for name, score in t:
+        if name in result:
+            result[name] += score
+        else:
+            result[name] = score
+
+    print(f'name :: {result}')
+
+
+program()
