@@ -1,4 +1,4 @@
-list = input("Enter the list of numbers to find min and max(separated by comma): ")
+list = input("Enter the list of inputNumbers to find min and max(separated by comma): ")
 numbers = [word.strip() for word in list.split(",")]
 numbers.sort()
 print(f"The minimum number is {numbers[0]} and maximum number is {numbers[-1]} (using sort function)", )
