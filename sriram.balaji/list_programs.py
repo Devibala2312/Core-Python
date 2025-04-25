@@ -93,6 +93,12 @@ def summationOfMap(values: list):
 print('Summation of dict: ', summationOfMap(tuples_list))
         
 
+## Dictionary comprehension with words len in list
+
+words_list = ["wordfgdfgd1", "wfford2", "word3"]
+new_map = {word_item:len(word_item) for (word_item) in words_list}
+
+print('new dict comprehension', new_map)
 
 
 
