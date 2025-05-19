@@ -64,3 +64,143 @@ print(add_ing_or_ly("playing"))
 print(add_ing_or_ly("go"))       
 
 
+6. Create a list comprehension that generates a list of squares of numbers from 1 to 20.
+
+squares = [x**2 for x in range(1, 21)]
+print(squares)
+
+
+7. Given a list of integers, find the largest and smallest numbers in the list without using the built-in max() and min() functions.
+
+numbers = [5, 3, 9, 1, 7]
+
+largest = smallest = numbers[0]
+for num in numbers[1:]:
+    if num > largest:
+        largest = num
+    if num < smallest:
+        smallest = num
+
+print(f"Largest: {largest}, Smallest: {smallest}")
+
+
+8. Write a function that takes two lists and returns a set of elements that are common to both lists.
+
+def common_elements(list1, list2):
+    return set(list1) & set(list2)
+
+print(common_elements([1, 2, 3], [2, 3, 4]))
+
+
+9. Given a list of words, return a set of words that appear more than once in the list.
+
+def repeated_words(words):
+    seen = set()
+    repeated = set()
+    for word in words:
+        if word in seen:
+            repeated.add(word)
+        else:
+            seen.add(word)
+    return repeated
+
+print(repeated_words(["apple", "banana", "apple", "orange", "banana", "grape"]))
+
+
+10. Given two sets, write a function to return their union, intersection, and difference.
+
+def set_operations(set1, set2):
+    return set1 | set2, set1 & set2, set1 - set2
+
+s1 = {1, 2, 3}
+s2 = {2, 3, 4}
+union, intersection, difference = set_operations(s1, s2)
+print(f"Union: {union}, Intersection: {intersection}, Difference: {difference}")
+
+11. Given a list of tuples where each tuple contains a name and a score (e.g., [('Alice', 90), ('Bob', 85), ('Alice', 95)]), write a function to return a dictionary where each name maps to the sum of their scores.
+
+def sum_scores(pairs):
+    result = {}
+    for name, score in pairs:
+        result[name] = result.get(name, 0) + score
+    return result
+
+scores = [('Alice', 90), ('Bob', 85), ('Alice', 95)]
+print(sum_scores(scores))
+
+
+12. Create a dictionary comprehension that maps each word in a list to its length.
+
+words = ["apple", "banana", "cherry"]
+word_lengths = {word: len(word) for word in words}
+print(word_lengths)
+
+
+13. Write a function that takes a tuple of numbers and returns a new tuple with each element doubled
+
+def double_elements(tup):
+    return tuple(x * 2 for x in tup)
+
+print(double_elements((1, 2, 3)))
+
+
+14. Write a function that swaps the first and last elements of a tuple.
+
+def swap_first_last(tup):
+    if len(tup) < 2:
+        return tup
+    return (tup[-1],) + tup[1:-1] + (tup[0],)
+
+print(swap_first_last((1, 2, 3, 4)))
+
+15. Write a function that takes two tuples and returns a new tuple that contains all elements from both tuples without any duplicates.
+
+def merge_tuples_unique(tup1, tup2):
+    return tuple(set(tup1) | set(tup2))
+
+print(merge_tuples_unique((1, 2, 3), (3, 4, 5)))
+
+
+16. Write a program to find the factorial of a number using a while loop.
+
+n = 5
+factorial = 1
+while n > 0:
+    factorial *= n
+    n -= 1
+print(f"Factorial: {factorial}")
+
+
+17. Write a program that finds the sum of all even numbers from 1 to 100 using a for loop
+
+sum_even = 0
+for i in range(2, 101, 2):
+    sum_even += i
+print(f"Sum of even numbers: {sum_even}")
+
+18. Write a program to count the number of vowels in a string using membership operators (in)
+
+string = "Hello World"
+vowels = "aeiouAEIOU"
+count = 0
+for char in string:
+    if char in vowels:
+        count += 1
+print(f"Number of vowels: {count}")
+
+19. Write a program that takes a number and determines if it's even or odd using the modulus operator %
+
+num = 7
+if num % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+
+20. Write a program to check whether a person can vote (age >= 18) using logical operators
+
+age = 20
+if age >= 18:
+    print("Eligible to vote")
+else:
+    print("Not eligible to vote")
+
